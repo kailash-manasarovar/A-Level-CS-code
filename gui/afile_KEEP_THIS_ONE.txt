@@ -1,0 +1,2 @@
+This is a sentence in lower case
+THIS ONE TO UPPER CASE
