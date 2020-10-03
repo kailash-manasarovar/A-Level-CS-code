@@ -4,19 +4,19 @@
 # Big O (worst case scenario runtime)
 # if the number of elements in the list = n, Big O of Linear Search = n
 
-#
-# import time
-#
-# def linear_search(myList, myItem):
-#     found = False
-#     position = 0
-#     while position < len(myList) and not found:
-#         if myList[position] == myItem:
-#             found = True
-#         position = position + 1
-#     return found
-#
-#
+
+#import time
+
+def linear_search(myList, myItem):
+    found = False
+    position = 0
+    while position < len(myList) and not found:
+        if myList[position] == myItem:
+            found = True
+        position = position + 1
+    return found
+
+
 #
 # list_of_elements = [4, 2, 8, 9, 3, 7]
 # number_to_search_for = int(input("Enter number to search: "))
@@ -67,16 +67,16 @@
 
 #DO-WHILE
 # Python doesn't give you do-while but...
-pointer = 0
-my_list = [1, 2, 3, 4, 5, 6]
-search_item = int(input("Enter number to search for: "))
-while True:
-    if pointer < len(my_list) and my_list[pointer] != search_item:
-        pointer = pointer + 1
-    else:
-        break
-
-if pointer >= len(my_list):
-    print("Value not in the list")
-else:
-    print("The value is in the list at location " + str(pointer))
+# pointer = 0
+# my_list = [1, 2, 3, 4, 5, 6]
+# search_item = int(input("Enter number to search for: "))
+# while True:
+#     if pointer < len(my_list) and my_list[pointer] != search_item:
+#         pointer = pointer + 1
+#     else:
+#         break
+#
+# if pointer >= len(my_list):
+#     print("Value not in the list")
+# else:
+#     print("The value is in the list at location " + str(pointer))

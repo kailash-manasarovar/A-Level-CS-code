@@ -4,6 +4,7 @@ class State(object):
     individual states within the state machine.
     """
 
+    # constructor method
     def __init__(self):
         print('Processing current state:', str(self))
 

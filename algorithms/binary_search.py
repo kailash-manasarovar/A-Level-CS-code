@@ -21,8 +21,8 @@ import time
 def binary_search(list_of_elements, item):
 
     # debug, print out trace table
-    print(list_of_elements[:])
     print("TRACE TABLE")
+    print(list_of_elements[:])
 
     first = 0
     last = len(list_of_elements) - 1
@@ -45,25 +45,32 @@ def binary_search(list_of_elements, item):
 
 
 
-def recursive_binary_search(list_of_elements, item):
+# def recursive_binary_search(list_of_elements, item):
+#
+#     if len(list_of_elements) == 0:
+#         return False
+#     else:
+#         mid = len(list_of_elements) // 2
+#
+#     if list_of_elements[mid] == item:
+#         return True
+#     else:
+#         if item < list_of_elements[mid]:
+#             return recursive_binary_search(list_of_elements[:mid], item)
+#         else:
+#             return recursive_binary_search(list_of_elements[mid + 1:], item)
 
-    if len(list_of_elements) == 0:
-        return False
-    else:
-        mid = len(list_of_elements) // 2
 
-    if list_of_elements[mid] == item:
-        return True
-    else:
-        if item < list_of_elements[mid]:
-            return recursive_binary_search(list_of_elements[:mid], item)
-        else:
-            return recursive_binary_search(list_of_elements[mid + 1:], item)
-
+import random as r
+randomlist = []
+for i in range(0,30):
+    n = r.randint(1,60)
+    randomlist.append(n)
+#print(randomlist)
 
 
 start = time.time()
-is_found = binary_search([1, 2, 5, 6, 8, 9, 11, 21], 7)
+is_found = binary_search(randomlist, 30)
 end = time.time()
 time_took = end - start
 rounded_time = round(time_took,5)
