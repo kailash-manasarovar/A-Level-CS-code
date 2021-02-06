@@ -16,13 +16,11 @@
 
 import time
 
-
-
 def binary_search(list_of_elements, item):
 
     # debug, print out trace table
-    print("TRACE TABLE")
-    print(list_of_elements[:])
+    #print("TRACE TABLE")
+    #print(list_of_elements[:])
 
     first = 0
     last = len(list_of_elements) - 1
@@ -38,7 +36,7 @@ def binary_search(list_of_elements, item):
                 first = mid + 1
 
         # debug, print out trace table
-        print(list_of_elements[first:last])
+        # print(list_of_elements[first:last])
 
     return found
 
@@ -63,21 +61,16 @@ def binary_search(list_of_elements, item):
 
 import random as r
 randomlist = []
-for i in range(0,30):
-    n = r.randint(1,60)
+for i in range(0,100000000):
+    n = r.randint(1,10000000)
     randomlist.append(n)
 #print(randomlist)
 
-
 start = time.time()
-is_found = binary_search(randomlist, 30)
+is_found = binary_search(randomlist, 300)
 end = time.time()
 time_took = end - start
 rounded_time = round(time_took,5)
-
-
-# print(binary_search([1,2,3,5,8], 5))
-# print(binary_search(['a','c','d','e','f'],'c'))
 
 
 if is_found:
@@ -86,3 +79,7 @@ else:
     print("Your item is not in the list.")
 
 print("It took in seconds: {:0.5f} ".format(rounded_time))
+
+
+# print(binary_search([1,2,3,5,8], 5))
+# print(binary_search(['a','c','d','e','f'],'c'))

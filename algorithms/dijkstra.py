@@ -104,4 +104,4 @@ print("\n")
 
 # print the shortest path
 print("The shortest path is : ")
-print(shortest_path(G, 'd', 'c'))
+print(shortest_path(G, 'c', 'e'))

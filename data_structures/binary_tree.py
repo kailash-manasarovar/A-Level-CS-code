@@ -56,23 +56,22 @@ class Node:
     def PostorderTraversal(self, root):
         res = []
         if root:
-            res = self.PostorderTraversal(root.left)
+            res = res + self.PostorderTraversal(root.left)
             res = res + self.PostorderTraversal(root.right)
             res.append(root.data)
         return res
 
 
-# root = Node("Dog1")
-# root.insert("Bouncer")
-# root.insert("Boxer")
-# root.insert("Chihuahua")
-# root.insert("Fido")
-# root.insert("Hound")
-# root.insert("Fox")
-# print(root.PrintTree())
-# print(root.inorderTraversal(root))
-# print(root.PreorderTraversal(root))
-# print(root.PostorderTraversal(root))
+root = Node(27)
+root.insert(14)
+root.insert(35)
+root.insert(10)
+root.insert(19)
+root.insert(31)
+root.insert(42)
+print(root.inorderTraversal(root))
+print(root.PreorderTraversal(root))
+print(root.PostorderTraversal(root))
 
 
 

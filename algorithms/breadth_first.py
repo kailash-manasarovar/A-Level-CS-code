@@ -1,30 +1,62 @@
-GRAPH = {
-    "A": {"colour": "White", "neighbours": ["B", "D", "E"]},
-    "B": {"colour": "White", "neighbours": ["A", "D", "C"]},
-    "C": {"colour": "White", "neighbours": ["B", "G"]},
-    "D": {"colour": "White", "neighbours": ["A", "B", "E", "F"]},
-    "E": {"colour": "White", "neighbours": ["A", "D"]},
-    "F": {"colour": "White", "neighbours": ["D"]},
-    "G": {"colour": "White", "neighbours": ["C"]},
+# graph = {
+#   'A' : ['B','C'],
+#   'B' : ['D', 'E'],
+#   'C' : ['F'],
+#   'D' : [],
+#   'E' : ['F'],
+#   'F' : []
+# }
+#
+# graph_2d_list = [["A", "B", "C"],
+#                  ["B", "D", "E"],
+#                  ["C", "F", ""],
+#                  ["D", "",  ""],
+#                  ["E", "F", ""],
+#                  ["F", "",  ""]]
+# # #
+# visited = [] # List to keep track of visited nodes.
+# queue = []   # Initialize a queue
+# #
+# def bfs(visited, graph, node):
+#   visited.append(node)
+#   queue.append(node)
+#
+#   while queue:
+#     s = queue.pop(0)
+#     print (s, end = " ")
+#
+#     for neighbour in graph[s]:
+#       if neighbour not in visited:
+#         visited.append(neighbour)
+#         queue.append(neighbour)
+#
+#
+# bfs(visited, graph, "A")
+# RESULT = A B C D E F
 
-}
+#import Queue
 
-def bfs(graph, vertex):
-    queue = []
-    visited = []
-    queue.append(vertex)
-    while len(queue) > 0:
-        currentNode = queue.pop()
-        currentNode = "Black"
-        visited.append(currentNode)
+big_graph = [['A', 'B', 'C'], ['B', 'D', 'E'], ['C', 'F'], ['D'], ['E', 'F'], ['F']]
+visited = []  # List to keep track of visited nodes.
+queue = []  # Initialize a queue
+#queue = Queue
+## etc...
 
-        for neighbour in currentNode:
-            if neighbour == "White":
-                queue.append(neighbour)
-                neighbour = "Grey"
+def bfs_lists(visited, graphs, node):
+    visited.append(node)
+    queue.append(node)
 
-    return visited
+    while queue:
+        #s = queue.dequeue()
+        #print(s, end=" ")
+
+        for graph in big_graph:
+            for node in graph:
+                if node not in visited:
+                    print("Appending ", node)
+                    visited.append(node)
+                    queue.append(node)
 
 
-visited = bfs(GRAPH, "A")
-print("List of nodes visited ", visited)
+bfs_lists(visited, big_graph, big_graph[0][0])
+# RESULT = A F E D C B  ??

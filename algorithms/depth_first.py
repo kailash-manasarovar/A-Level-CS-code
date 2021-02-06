@@ -1,15 +1,21 @@
-GRAPH = { "A" : ["B", "D", "E"],  "B" : ["A", "C", "D"], "C" : ["B", "G"],
-          "D" : ["A", "B", "E", "F"], "E" : ["A", "D"], "F" : ["D"], "G" : ["C"] }
+graph = {
+    'A' : ['B','C'],
+    'B' : ['D', 'E'],
+    'C' : ['F'],
+    'D' : [],
+    'E' : ['F'],
+    'F' : []
+}
 
 visitedList  = []
 
-def dfs(graph, currentVertex, visited):
-    visited.append(currentVertex)
-    for vertex in graph[currentVertex]:
-        if vertex not in visited:
-            dfs(graph, vertex, visited)
+def dfs(visited, graph, node):
+    visited.append(node)
+    for edge in graph[node]:
+        if edge not in visited:
+            dfs(visited, graph, edge)
         print(visited)
     return visited
 
-traversal = dfs(GRAPH, "A", visitedList)
+traversal = dfs(visitedList, graph, "A")
 print("Nodes visited in this order ", traversal)

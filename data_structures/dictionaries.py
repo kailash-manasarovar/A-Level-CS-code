@@ -3,49 +3,69 @@
 # see python book
 # a python dictionary is a hash table
 
-# empty dictionary
-D = {}
-# key value pairs
-D['a'] = 1
-D['b'] = 2
-D['c'] = 3
-print(D)
-for k in D.keys():
-    print(D[k])
-for k,v in D.items():
-    print(k,':',v)
-#l = map(hash, [0, 1, 2, 3])
-#print(l)
-#import hashlib
-#print(hashlib.md5('a'))
-word = 'brontosaurus'
-d = dict()
-for c in word:
-    if c not in d:
-        d[c] = 1
-    else:
-        d[c] = d[c] + 1
-print(d)
-# count words
-#fname = input('Enter the file name: ')
-#try:
+# # empty dictionary
+# D = {}
+# # key value pairs
+# D['a'] = 1
+# D['b'] = 2
+# D['c'] = 3
+# print(D)
+# for k in D.keys():
+#     print(D[k])
+# for k,v in D.items():
+#     print(k,':',v)
+#
+
+# # using a map type runs the named function on a sequence of data
+# # here the hash function runs on the data
+# l = map(str, [0, 1, 2, 3])
+# print(list(l))
+# def my_function(a,b):
+#     return a+b
+# l = map(my_function, [1, 2, 3, 4], [1, 2, 3, 4])
+# print(list(l))
+
+
+# # using a built in hash function
+# import hashlib
+# hash = hashlib.md5("a".encode('utf-8'))
+# print(hash)
+# print(hash.hexdigest())
+
+
+# another way to create a dictionary
+# add each value and update the number in the bucket if there is more than one
+# word = 'brontosaurus'
+# d = dict()
+# for c in word:
+#     if c not in d:
+#         d[c] = 1
+#     else:
+#         d[c] = d[c] + 1
+# print(d)
+
+
+# # count words in a text file
+# fname = input('Enter the file name: ')
+# try:
 #    fhand = open(fname)
-#except:
+# except:
 #    print('File cannot be opened:', fname)
 #    exit()
-#counts = dict()
-#for line in fhand:
+# counts = dict()
+# for line in fhand:
 #    words = line.split()
 #    for word in words:
 #        if word not in counts:
 #            counts[word] = 1
 #        else:
 #            counts[word] += 1
-#print(counts)
+# print(counts)
 
-counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
-lst = list(counts.keys())
-print(lst)
-lst.sort()
-for key in lst:
-    print(key, counts[key])
+# sorting a dictionary
+# counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+# lst = list(counts.keys())
+# print(lst)
+# lst.sort()
+# for key in lst:
+#     print(key, counts[key])

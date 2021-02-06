@@ -67,21 +67,35 @@ class Node:
     def postorderTraversal(root):
         if root:
             # recursion on left
-            postorderTraversal(root.left)
+            root.postorderTraversal(root.left)
             # recursion on right child
-            postorderTraversal(root.right)
+            root.postorderTraversal(root.right)
             # now print the data of node
             print(root.data)
         else:
             pass
 
 
-root = Node('+')
-root.insert('*')
-root.insert('/')
-root.insert('a')
-root.insert('b')
-root.insert('c')
-root.insert('d')
+def postorder(tree):
+    data = []
+
+    def recurse(node):
+        if not node:
+            return
+        recurse(node.left)
+        recurse(node.right)
+        data.append(node.data)
+
+    recurse(tree)
+    return data
+
+
+root = Node('C')
+root.insert('D')
+root.insert('B')
+root.insert('A')
+root.insert('F')
+root.insert('G')
 print(root.PrintTree())
-root.postorderTraversal()
+#root.postorderTraversal()
+postorder(root)

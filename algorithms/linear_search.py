@@ -5,7 +5,8 @@
 # if the number of elements in the list = n, Big O of Linear Search = n
 
 
-#import time
+import time
+import random as r
 
 def linear_search(myList, myItem):
     found = False
@@ -15,6 +16,26 @@ def linear_search(myList, myItem):
             found = True
         position = position + 1
     return found
+
+
+randomlist = []
+for i in range(0,3000000):
+    n = r.randint(1,600)
+    randomlist.append(n)
+#print("Random list:", randomlist)
+
+start = time.time()
+is_found = linear_search(randomlist, 30)
+end = time.time()
+time_took = end - start
+rounded_time = round(time_took,5)
+
+if is_found:
+    print("Your item is in the list.")
+else:
+    print("Your item is not in the list.")
+
+print("It took in seconds: {:0.5f} ".format(rounded_time))
 
 
 #
