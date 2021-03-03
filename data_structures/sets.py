@@ -9,3 +9,7 @@ myset = {"apple", "banana", "cherry"}
 print(myset)
 print(type(myset))
 print(len(myset))
+
+
+# set has a constructor
+thisset = set(("apple", "banana", "cherry"))

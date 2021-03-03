@@ -35,6 +35,8 @@ r.insert(r, Node(42))
 
 
 
+
+
 # ## SEARCH
 def search(root, key):
     # Recursive base case: root is null or key is present at root

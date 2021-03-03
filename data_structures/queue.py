@@ -60,10 +60,10 @@ class Queue:
             result = result + " " + str(i)
         return result
 
-q=Queue()
-q.enqueue(4)
-q.enqueue('dog')
-print(q)
-q.enqueue(True)
-print(q.size())
-print(q)
+# q=Queue()
+# q.enqueue(4)
+# q.enqueue('dog')
+# print(q)
+# q.enqueue(True)
+# print(q.size())
+# print(q)

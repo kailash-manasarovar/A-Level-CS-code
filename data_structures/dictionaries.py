@@ -3,7 +3,7 @@
 # see python book
 # a python dictionary is a hash table
 
-# # empty dictionary
+# empty dictionary
 # D = {}
 # # key value pairs
 # D['a'] = 1
@@ -14,16 +14,8 @@
 #     print(D[k])
 # for k,v in D.items():
 #     print(k,':',v)
-#
 
-# # using a map type runs the named function on a sequence of data
-# # here the hash function runs on the data
-# l = map(str, [0, 1, 2, 3])
-# print(list(l))
-# def my_function(a,b):
-#     return a+b
-# l = map(my_function, [1, 2, 3, 4], [1, 2, 3, 4])
-# print(list(l))
+
 
 
 # # using a built in hash function
@@ -33,8 +25,8 @@
 # print(hash.hexdigest())
 
 
-# another way to create a dictionary
-# add each value and update the number in the bucket if there is more than one
+# # another way to create a dictionary
+# # add each value and update the number in the bucket if there is more than one
 # word = 'brontosaurus'
 # d = dict()
 # for c in word:
@@ -63,9 +55,9 @@
 # print(counts)
 
 # sorting a dictionary
-# counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
-# lst = list(counts.keys())
-# print(lst)
-# lst.sort()
-# for key in lst:
-#     print(key, counts[key])
+counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+lst = list(counts.keys())
+print(lst)
+lst.sort()
+for key in lst:
+    print(key, counts[key])
