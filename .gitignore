@@ -33,3 +33,10 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
+########
+## Students files
+/algorithms/binary_search_tree.png
+
+*/__pycache__/*
