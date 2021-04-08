@@ -14,7 +14,7 @@
 #       _ _ _
 #       _
 
-import time
+#import time
 
 def binary_search(list_of_elements, item):
 
@@ -27,6 +27,7 @@ def binary_search(list_of_elements, item):
     found = False
     while first <= last and not found:
         mid = (first + last) // 2
+        #print(mid)
         if list_of_elements[mid] == item:
             found = True
         else:
@@ -40,6 +41,10 @@ def binary_search(list_of_elements, item):
 
     return found
 
+
+## A Level mock question test
+my_list = ["Adam", "Alex", "Anna", "Hon", "Mohammed", "Moonis", "Niraj", "Philip", "Punit", "Ravi", "Richard", "Timothy", "Tushara", "Uzair", "Zara"]
+#print(binary_search(my_list, "Richard"))
 
 
 
@@ -59,26 +64,26 @@ def binary_search(list_of_elements, item):
 #             return recursive_binary_search(list_of_elements[mid + 1:], item)
 
 
-import random as r
-randomlist = []
-for i in range(0,100000000):
-    n = r.randint(1,10000000)
-    randomlist.append(n)
-#print(randomlist)
-
-start = time.time()
-is_found = binary_search(randomlist, 300)
-end = time.time()
-time_took = end - start
-rounded_time = round(time_took,5)
-
-
-if is_found:
-    print("Your item is in the list.")
-else:
-    print("Your item is not in the list.")
-
-print("It took in seconds: {:0.5f} ".format(rounded_time))
+# import random as r
+# randomlist = []
+# for i in range(0,100000000):
+#     n = r.randint(1,10000000)
+#     randomlist.append(n)
+# #print(randomlist)
+#
+# start = time.time()
+# is_found = binary_search(randomlist, 300)
+# end = time.time()
+# time_took = end - start
+# rounded_time = round(time_took,5)
+#
+#
+# if is_found:
+#     print("Your item is in the list.")
+# else:
+#     print("Your item is not in the list.")
+#
+# print("It took in seconds: {:0.5f} ".format(rounded_time))
 
 
 # print(binary_search([1,2,3,5,8], 5))

@@ -1,17 +1,17 @@
 # graph as adjacency list
-graph = {'1': set(['2', '3']),
-         '2': set(['1', '3', '4']),
-         '3': set(['1', '2', '5']),
-         '4': set(['2']),
-         '5': set(['3'])}
+# graph = {'1': set(['2', '3']),
+#          '2': set(['1', '3', '4']),
+#          '3': set(['1', '2', '5']),
+#          '4': set(['2']),
+#          '5': set(['3'])}
 
 # graph as adjacency matrix in 2D array form
 # where 0 index = 1
 m = [
-    [0, 1, 1, 0, 0]
-    [1, 0, 1, 1, 0]
-    [1, 1, 0, 0, 1]
-    [0, 1, 0, 0, 0]
+    [0, 1, 1, 0, 0],
+    [1, 0, 1, 1, 0],
+    [1, 1, 0, 0, 1],
+    [0, 1, 0, 0, 0],
     [0, 0, 1, 0, 0]
 ]
 
@@ -36,9 +36,13 @@ m = [
 #  Cat[A]  C
 # ENDFOR
 no_of_cats = 5
+print(no_of_cats)
 for a in range(2, no_of_cats):
+    print(a)
     b = 1
+    print(b)
     c = 1
+    print(c)
 while b < a:
     if m[a, b] == 1:
         if m[b] == c:

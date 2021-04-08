@@ -17,24 +17,24 @@
 # print(subject_marks)
 
 
-# ## fibonacci
-# from functools import reduce
-# fib_series = lambda n: reduce(lambda x, _: x + [x[-1] + x[-2]],
-#                               range(n - 2), [0, 1])
-# print("Fibonacci series upto 2:")
-# print(fib_series(2))
-# print("\nFibonacci series upto 3:")
-# print(fib_series(3))
-# print("\nFibonacci series upto 4:")
-# print(fib_series(4))
-# print("\nFibonacci series upto 9:")
-# print(fib_series(9))
+## fibonacci
+from functools import reduce
+fib_series = lambda n: reduce(lambda x, _: x + [x[-1] + x[-2]],
+                              range(n - 2), [0, 1])
+print("Fibonacci series upto 2:")
+print(fib_series(2))
+print("\nFibonacci series upto 3:")
+print(fib_series(3))
+print("\nFibonacci series upto 4:")
+print(fib_series(4))
+print("\nFibonacci series upto 9:")
+print(fib_series(9))
 
 
-## palindromes
-texts = ["php", "w3r", "Python", "abcd", "Java", "aaa"]
-print("Orginal list of strings:")
-print(texts)
-result = list(filter(lambda x: (x == "".join(reversed(x))), texts))
-print("\nList of palindromes:")
-print(result)
+# ## palindromes
+# texts = ["php", "w3r", "Python", "abcd", "Java", "aaa"]
+# print("Orginal list of strings:")
+# print(texts)
+# result = list(filter(lambda x: (x == "".join(reversed(x))), texts))
+# print("\nList of palindromes:")
+# print(result)
